@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: white url("images/bg.png") no-repeat;
+    background-size: cover;
+}
+
+li a {
+    decoration: none;
+    color: green;
+}
