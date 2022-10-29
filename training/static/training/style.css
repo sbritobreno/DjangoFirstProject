@@ -3,9 +3,57 @@ body {
     padding: 0;
     background: white url("images/bg.png") no-repeat;
     background-size: cover;
+    font-family: "Times New Roman", Times, serif;
 }
 
-li a {
-    decoration: none;
-    color: green;
+#title {
+  text-align: center;
+  margin: 50px;
+  font-size: 48px;
+  font-family: 'Open Sans';
 }
+
+li {
+    font-size: 38px;
+    margin: 10px;
+}
+
+a {
+    text-decoration:none;
+    color: black;
+}
+
+.borders {
+    margin: 100px 300px;
+    padding: 5px 15px;
+    border: solid 3px black;
+    border-radius: 10px;
+}
+
+form {
+    margin: 100px 300px;
+    padding: 5px 15px;
+    border: solid 3px black;
+    border-radius: 10px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+input {
+    background-color: #4CAF50;
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+

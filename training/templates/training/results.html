@@ -1,13 +1,20 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'training/style.css' %}">
+<title>Poll Results</title>
 
-<h1>{{ question.question_text }}</h1>
+<button class="btn"><a href="{% url 'training:index' %}">Home</a></button>
+<button class="btn"><a href="{% url 'training:detail' question.id %}">Vote Again</a></button>
 
-<ul>
-{% for choice in question.choice_set.all %}
-    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
-{% endfor %}
-</ul>
+<h1 id="title">Poll's Result</h1>
+<div class="borders">
+    <h1>{{ question.question_text }}</h1>
+    <div>
+        <ul>
+        {% for choice in question.choice_set.all %}
+            <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
 
-<a href="{% url 'training:detail' question.id %}">Vote again?</a>
