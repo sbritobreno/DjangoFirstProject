@@ -6,7 +6,19 @@ body {
     font-family: "Times New Roman", Times, serif;
 }
 
-#title {
+h3 {
+    margin: 0.25em;
+    font-size: 1.35em;
+    text-align: center;
+}
+
+.login_logout {
+    display: flex;
+    margin: 0.75em;
+    height: 2.25em;
+}
+
+h1 {
   text-align: center;
   margin: 50px;
   font-size: 48px;

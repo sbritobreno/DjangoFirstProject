@@ -4,9 +4,10 @@
 <title>Poll Results</title>
 
 <button class="btn"><a href="{% url 'training:index' %}">Home</a></button>
+<button class="btn" ><a href="{% url 'logout' %}">Log Out</a></button>
 <button class="btn"><a href="{% url 'training:detail' question.id %}">Vote Again</a></button>
 
-<h1 id="title">Poll's Result</h1>
+<h1>Poll's Result</h1>
 <div class="borders">
     <h1>{{ question.question_text }}</h1>
     <div>

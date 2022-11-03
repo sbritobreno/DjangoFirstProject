@@ -6,7 +6,21 @@
 <link rel="stylesheet" href="{% static 'training/style.css' %}">
 <title>Polls</title>
 
-<h1 id="title">Let's let the Polls decide it {;-)</h1>
+{% block content %}
+{% if user.is_authenticated %}
+  <div class="login_logout">
+      <h3><strong>Hi {{ user.username }}!</strong></h3>
+      <button class="btn" ><a href="{% url 'logout' %}">Log Out</a></button>
+  </div>
+{% else %}
+  <div class="login_logout">
+      <h3><strong>You are not logged in</strong></h3>
+      <button class="btn"><a href="{% url 'login' %}">Log In</a></button>
+  </div>
+{% endif %}
+{% endblock %}
+
+<h1>Let's let the Polls decide it {;-)</h1>
 <div class="borders">
     {% if latest_question_list %}
         <ol>
