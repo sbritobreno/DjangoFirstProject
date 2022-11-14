@@ -4,8 +4,12 @@
 <title>Poll Results</title>
 
 <button class="btn"><a href="{% url 'training:index' %}">Home</a></button>
-<button class="btn" ><a href="{% url 'logout' %}">Log Out</a></button>
 <button class="btn"><a href="{% url 'training:detail' question.id %}">Vote Again</a></button>
+{% if user.is_authenticated %}
+    <button class="btn" ><a href="{% url 'logout' %}">Log Out</a></button>
+{% else %}
+      <button class="btn"><a href="{% url 'login' %}">Log In</a></button>
+{% endif %}
 
 <h1>Poll's Result</h1>
 <div class="borders">

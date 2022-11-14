@@ -4,7 +4,12 @@
 <title>Poll Details</title>
 
 <button class="btn"><a href="{% url 'training:index' %}">Home</a></button>
-<button class="btn" ><a href="{% url 'logout' %}">Log Out</a></button>
+{% if user.is_authenticated %}
+    <button class="btn" ><a href="{% url 'logout' %}">Log Out</a></button>
+{% else %}
+      <button class="btn"><a href="{% url 'login' %}">Log In</a></button>
+{% endif %}
+
 <h1>Poll's Details</h1>
 <form action="{% url 'training:vote' question.id %}" method="post">
     {% csrf_token %}

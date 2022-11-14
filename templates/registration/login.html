@@ -6,6 +6,7 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
+<button class="btn"><a href="{% url 'training:index' %}">Home</a></button>
 <h1>Log In</h1>
 <form method="post">
   {% csrf_token %}
