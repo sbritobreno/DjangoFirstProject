@@ -1,3 +1,4 @@
+<!--This file changes the default h1 title in Django site admin-->
 {% extends "admin/base.html" %}
 
 {% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}

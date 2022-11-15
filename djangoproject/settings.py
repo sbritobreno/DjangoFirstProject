@@ -74,6 +74,8 @@ WSGI_APPLICATION = 'djangoproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+"""Configure here your own settings for the database and also make sure you have a database created in mysql,
+then ran the command py manage.py migrate"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -126,5 +128,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+"""Here is the redirect routes for Login and Logout functions"""
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "login"

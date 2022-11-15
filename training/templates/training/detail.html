@@ -4,6 +4,7 @@
 <title>Poll Details</title>
 
 <button class="btn"><a href="{% url 'training:index' %}">Home</a></button>
+<!--If else condition to determine which button will be display-->
 {% if user.is_authenticated %}
     <button class="btn" ><a href="{% url 'logout' %}">Log Out</a></button>
 {% else %}
@@ -11,6 +12,7 @@
 {% endif %}
 
 <h1>Poll's Details</h1>
+<!--Form to create a new vote for a certain question -->
 <form action="{% url 'training:vote' question.id %}" method="post">
     {% csrf_token %}
     <fieldset>

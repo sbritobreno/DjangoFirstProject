@@ -24,9 +24,10 @@
 <div class="borders">
     {% if latest_question_list %}
         <ol>
-        {% for question in latest_question_list %}
-            <li><a href="{% url 'training:detail' question.id %}">{{ question.question_text }}</a></li>
-        {% endfor %}
+            <!--Loop to display all pools-->
+            {% for question in latest_question_list %}
+                <li><a href="{% url 'training:detail' question.id %}">{{ question.question_text }}</a></li>
+            {% endfor %}
         </ol>
     {% else %}
         <p>No polls are available.</p>
